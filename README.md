@@ -1,2 +1,2 @@
 # leadlens
-AI-powered sales intelligence for LinkedIn — Built for India
+AI-powered sales intelligence Chrome extension for LinkedIn
