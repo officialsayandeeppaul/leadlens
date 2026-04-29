@@ -1,0 +1,22 @@
+name: PR Checks
+on:
+  pull_request:
+    branches: [main, staging, dev]
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Typecheck dashboard
+        run: pnpm --filter dashboard exec tsc --noEmit
+      - name: Typecheck extension
+        run: pnpm --filter extension exec tsc --noEmit
