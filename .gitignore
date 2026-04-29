@@ -1,0 +1,17 @@
+﻿node_modules/
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.local
+.env.*.local
+dist/
+.next/
+out/
+build/
+.motia/
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+*.log
+apps/extension/dist/
